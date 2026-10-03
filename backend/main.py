@@ -5,7 +5,8 @@ from sentence_transformers import SentenceTransformer, util
 app = FastAPI(title="VibeSpace AI Matching API", version="1.0.0")
 
 # Load a lightweight open-weight embedding model (Runs locally / CPU friendly)
-embedder = SentenceTransformer('all-MiniLM-L6-2b')
+# To this (adding '-v2'):
+embedder = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 
 # Sample in-memory database of user vibe profiles
 USERS_DB = [
